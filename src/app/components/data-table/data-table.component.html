@@ -1,0 +1,63 @@
+<div class="table-container" >
+  <div class="center mx-auto">
+    <div class="row m-0" style="width: 1100px;" >
+      <div class="state-heading cell position-fixed-x"> 
+        <div class="text-data">State/UT</div>
+      </div>
+      <div class="other-heading cell "> 
+        <div class="text-data">Confirmed</div>
+      </div>
+      <div class="other-heading cell "> 
+        <div class="text-data">Active</div>
+      </div>
+      <div class="other-heading cell "> 
+        <div class="text-data">Recovered</div>
+      </div>
+      <div class="other-heading cell "> 
+        <div class="text-data">Deceased</div>
+      </div>
+      <div class="other-heading cell "> 
+        <div class="text-data">Tested</div>
+      </div>
+      <div class="other-heading cell "> 
+        <div class="text-data">Vaccinated (At Least One Dose)</div>
+      </div>
+      <div class="other-heading cell "> 
+        <div class="text-data">Fully Vaccinated</div>
+      </div>
+    </div>
+    <div class="row m-0" style="width: 1100px;" *ngFor="let d of data;even as isEven">
+      <div class="state-data cell position-fixed-x "> 
+        <div class="state-name">{{d.state}}</div>
+      </div>
+      <div class="other-data {{isEven?'no-cell':'cell'}} "> 
+        <div class="total-data">{{d.total_confirm}}</div>
+        <div class="current-data color-danger" *ngIf="d.confirm>0">↑{{convert_number(d.confirm)}}</div>
+        <div class="current-data color-danger" *ngIf="d.confirm<0">↓{{convert_number(d.confirm*-1)}}</div>
+      </div>
+      <div class="other-data {{isEven?'no-cell':'cell'}} "> 
+        <div class="total-data">{{d.total_active}}</div>
+      </div>
+      <div class="other-data {{isEven?'no-cell':'cell'}} "> 
+        <div class="total-data">{{d.total_recover}}</div>
+        <div class="current-data color-green" *ngIf="d.recover>0">↑{{convert_number(d.recover)}}</div>
+        <div class="current-data color-green" *ngIf="d.recover<0">↓{{convert_number(d.recover*-1)}}</div>
+      </div>
+      <div class="other-data {{isEven?'no-cell':'cell'}} "> 
+        <div class="total-data">{{d.total_death}}</div>
+        <div class="current-data" *ngIf="d.death>0">↑{{convert_number(d.death)}}</div>
+        <div class="current-data" *ngIf="d.death<0">↓{{convert_number(d.death*-1)}}</div>
+      </div>
+      <div class="other-data {{isEven?'no-cell':'cell'}} "> 
+        <div class="total-data">{{d.total_test}}</div>
+        <div class="current-data color-blue" *ngIf="d.test!='0'">↑{{d.test}}</div>
+      </div>
+      <div class="other-data {{isEven?'no-cell':'cell'}} "> 
+        <div class="total-data">{{d.vaccine_1}}</div>
+      </div>
+      <div class="other-data {{isEven?'no-cell':'cell'}} "> 
+        <div class="total-data">{{d.vaccine_2}}</div>
+      </div>
+    </div>
+  </div>
+</div>

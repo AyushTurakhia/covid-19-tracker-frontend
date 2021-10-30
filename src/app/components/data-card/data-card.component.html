@@ -1,0 +1,75 @@
+
+<div class="d-flex justify-content-center">
+<div class="row ">
+  <div class="card_box {{type_screen=='xs'?'col-12':type_screen=='s'?'col-6':'col-3'}}">
+    <div class="card text-center confirm-card center " style="max-width: 18rem;">
+      <div class="confirm-title ">Confirmed</div>
+      <div class="confirm-current-data" *ngIf="curent_confirm_count>0">&#8593; {{convert_number(curent_confirm_count)}}</div>
+      <div class="confirm-current-data" *ngIf="curent_confirm_count<0">&#8595; {{convert_number(curent_confirm_count*-1)}}</div>
+      <div class="confirm-total-data ">{{total_confirm}}</div>
+      <div style="display: block;width:100%;position:relative;height:200px;">
+        <canvas baseChart style="position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);" width="150" height="100"
+          [datasets]="confirmData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
+  <div class="card_box {{type_screen=='xs'?'col-12':type_screen=='s'?'col-6':'col-3'}}">
+    <div class="card text-center active-card center " style="max-width: 18rem;">
+      <div class="active-title ">Active</div>
+      <div class="active-current-data "></div>
+      <div class="active-total-data ">{{total_active}}</div>
+      <div style="display: block;width:100%;position:relative;height:200px;">
+        <canvas baseChart style="position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);" width="150" height="100"
+          [datasets]="activeData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
+  <div class="card_box {{type_screen=='xs'?'col-12':type_screen=='s'?'col-6':'col-3'}}">
+    <div class="card text-center recover-card  center" style="max-width: 18rem;">
+      <div class="recover-title ">recovered</div>
+      <div class="recover-current-data " *ngIf="curent_recover_count>0">&#8593; {{convert_number(curent_recover_count)}}</div>
+      <div class="recover-current-data " *ngIf="curent_recover_count<0">&#8595; {{convert_number(curent_recover_count*-1)}}</div>
+      <div class="recover-total-data ">{{total_recover}}</div>
+      <div style="display: block;width:100%;position:relative;height:200px;">
+        <canvas baseChart style="position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);" width="150" height="100"
+          [datasets]="recoverData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+<div class="card_box {{type_screen=='xs'?'col-12':type_screen=='s'?'col-6':'col-3'}}">
+  <div class="card text-center decease-card center" style="max-width: 18rem;">
+    <div class="decease-title ">Deceased</div>
+    <div class="decease-current-data " *ngIf="curent_death_count>0">&#8593; {{convert_number(curent_death_count)}}</div>
+    <div class="decease-current-data " *ngIf="curent_death_count<0">&#8595; {{convert_number(curent_death_count*-1)}}</div>
+    <div class="decease-total-data ">{{total_death}}</div>
+    <div style="display: block;width:100%;position:relative;height:200px;">
+        <canvas baseChart style="position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);" width="150" height="100"
+          [datasets]="deathsData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType">
+        </canvas>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+

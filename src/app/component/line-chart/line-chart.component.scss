@@ -1,0 +1,86 @@
+#chart {
+    max-width: 650px;
+    margin: 35px auto;
+  }
+  .option-box{
+    height: 50px;
+    width: 240px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.choose-box{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    position: relative;
+    float: left;
+}
+.choose-box:hover{
+    background-color: rgb(214, 211, 211);
+}
+.choose-box-select{
+    background-color: rgb(214, 211, 211);
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    position:absolute;
+    left: 50%;
+    top:50%;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+}
+.confirm{
+    background-color: rgb(186, 21, 21);
+}
+.recover{
+    background-color: rgb(39, 208, 24);
+}
+.death{
+    background-color: rgb(84, 84, 83);
+}
+.active{
+    background-color: rgb(26, 77, 196);
+}
+.tesr{
+    color: rgb(137, 35, 35);
+}
+.days-option-box{
+    height: 50px;
+    width: 330px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.days-choose-box{
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    position: relative;
+    float: left;
+    background-color:rgba(255,193,7,.12549019607843137);
+    
+}
+.days-choose-box:hover{
+    background-color: rgba(255,193,7,.6);
+}
+.days-select{
+    background-color: rgba(255,193,7,.6);
+}
+.days-text{
+    
+    text-align: center;
+    margin-top: 13px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fd7e14;
+}  

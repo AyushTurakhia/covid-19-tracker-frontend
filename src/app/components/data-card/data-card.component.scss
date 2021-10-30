@@ -1,0 +1,140 @@
+.confirm-card:hover{
+    background-color: rgb(255, 217, 221);
+}
+
+.confirm-card{
+    background-color: rgb(250, 249, 249);
+    height: 220px;
+    width: 220px;
+   
+    float: left;
+}
+
+.confirm-title{
+    color: #ff073a;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.confirm-current-data{
+    color: rgba(255,7,58,.6);
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 400;
+    height: 20px;
+}
+
+.confirm-total-data{
+    color: #ff073a;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.recover-card:hover{
+    background-color: rgb(215, 252, 219);
+}
+
+.recover-card{
+    background-color: rgb(250, 249, 249);
+    height: 220px;
+    float: left;
+    width: 220px;
+   
+}
+
+.recover-title{
+    color: #28a745;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.recover-current-data{
+    color: rgba(40,167,69,.6);
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 400;
+    height: 20px;
+}
+
+.recover-total-data{
+    color: #28a745;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.active-card:hover{
+    background-color: #d8e6f7;
+}
+
+.active-card{
+    background-color: rgb(250, 249, 249);
+    height: 220px;
+    float: left;
+    width: 220px;
+   
+}
+
+.active-title{
+    color: #007bff;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.active-current-data{
+    color: #2365abc4;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 400;
+    height: 20px;
+}
+
+.active-total-data{
+    color: #007bff;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.decease-card:hover{
+    background-color: #d8d9da;
+}
+
+.decease-card{
+    background-color: rgb(250, 249, 249);
+    height: 220px;
+    width: 220px;
+    float: left;
+}
+
+.decease-title{
+    color: #6c757d;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.decease-current-data{
+    color: rgba(108,117,125,.6);
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 400;
+    height: 20px;
+}
+
+.decease-total-data{
+    color: #6c757d;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.card_box{
+    position: relative;
+    height: 250px;
+    padding-top: 15px;
+}
+.center{
+    left: 50%;
+    transform: translateX(-50%);
+}

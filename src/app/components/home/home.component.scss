@@ -1,0 +1,35 @@
+.option-container{
+    width: 300px;
+    height: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(247, 229, 229);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 150px;
+}
+
+.option{
+    border-radius: 150px;
+    font-size: 22px;
+    color: rgb(155, 120, 120);
+    font-weight: 500;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.option-select{
+    border-radius: 150px;
+    font-size: 22px;
+    color: rgb(248, 238, 238);
+    background-color: rgb(240, 88, 88);
+    font-weight: 500;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.option:hover{
+    background-color: rgb(218, 119, 119);
+    color: rgb(247, 228, 228);;
+}

@@ -1,0 +1,11 @@
+<div class="vaccine-container" style="margin-top: 50px;">
+    <div class="vaccine_info_box">
+        <img src="../../../assets/image/shield-check.png" width="28px" height="28px"> {{total_vaccine}} vaccine doses administered
+    </div>
+    <div class="label one_label" [ngStyle]="{'left': one_dose_percentage}">1st Dose [{{one_dose_percentage}}]</div>
+    <div class="progress-bar-container" >
+        <div class="progress-bar-2" [ngStyle]="{'width': two_dose_percentage}"></div>
+        <div class="progress-bar-1" [ngStyle]="{'width': one_dose_percentage}"></div>
+    </div>
+    <div class="label full_label" [ngStyle]="{'left': two_dose_percentage}">2nd Dose [{{two_dose_percentage}}]</div>   
+</div>

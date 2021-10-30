@@ -1,0 +1,27 @@
+<div class="option-box row">
+    <div class="choose-box {{selected_chart=='confirm'?'choose-box-select':''}}" (click)="change_chart('confirm')">
+      <div class="dot confirm"></div>
+    </div>
+    <div class="choose-box {{selected_chart=='recover'?'choose-box-select':''}}" (click)="change_chart('recover')">
+      <div class="dot recover"></div>
+    </div>
+    <div class="choose-box {{selected_chart=='active'?'choose-box-select':''}}" (click)="change_chart('active')">
+      <div class="dot active"></div>
+    </div>
+    <div class="choose-box {{selected_chart=='death'?'choose-box-select':''}}" (click)="change_chart('death')">
+      <div class="dot death"></div>
+    </div>
+</div>
+<div id="chart">
+</div>
+<div class="days-option-box row">
+    <div class="days-choose-box {{days_selected==90?'days-select':''}}" (click)="change_days(90)">
+      <div class="days-text">90 Days</div>
+    </div>
+    <div class="days-choose-box {{days_selected==60?'days-select':''}}" (click)="change_days(60)">
+      <div class="days-text">60 Days</div>
+    </div>
+    <div class="days-choose-box {{days_selected==30?'days-select':''}}" (click)="change_days(30)">
+      <div class="days-text">30 Days</div>
+    </div>
+    </div>

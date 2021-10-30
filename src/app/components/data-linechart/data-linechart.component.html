@@ -1,0 +1,183 @@
+
+<div class="option-box row">
+<div class="choose-box {{selected_chart=='confirm'?'choose-box-select':''}}" (click)="change_chart('confirm')">
+  <div class="dot confirm"></div>
+</div>
+<div class="choose-box {{selected_chart=='recover'?'choose-box-select':''}}" (click)="change_chart('recover')">
+  <div class="dot recover"></div>
+</div>
+<div class="choose-box {{selected_chart=='active'?'choose-box-select':''}}" (click)="change_chart('active')">
+  <div class="dot active"></div>
+</div>
+<div class="choose-box {{selected_chart=='death'?'choose-box-select':''}}" (click)="change_chart('death')">
+  <div class="dot death"></div>
+</div>
+</div>
+<div class="chart-box">
+  <div class="confirm-box" *ngIf="selected_chart=='confirm'" >
+  <div class="title-confrim ">
+    Confirm
+  </div>
+    <canvas baseChart style="
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    " width="760" height="420" [datasets]="confirmData" [labels]="lineChartLabels" [options]="confirmChartOptions"
+        [legend]="lineChartLegend" [chartType]="lineChartType">
+    </canvas>
+    <div class="x-axis axes-color-confirm"></div>
+    <div class="y-axis axes-color-confirm"></div>
+    <div class="x-label-box">
+      <div class="x-label-1">
+        <div class="vertical-line axes-color-confirm"></div>
+        <div class="x-label-text label-color-confirm">{{date_label[0]}}</div>
+      </div>
+      <div class="x-label-2">
+        <div class="vertical-line axes-color-confirm"></div>
+        <div class="x-label-text label-color-confirm">{{date_label[1]}}</div>
+      </div>
+      <div class="x-label-3">
+        <div class="vertical-line axes-color-confirm"></div>
+        <div class="x-label-text label-color-confirm">{{date_label[2]}}</div>
+      </div>
+      <div class="x-label-4">
+        <div class="vertical-line axes-color-confirm"></div>
+        <div class="x-label-text label-color-confirm">{{date_label[3]}}</div>
+      </div>
+      <div class="x-label-5">
+        <div class="vertical-line axes-color-confirm"></div>
+        <div class="x-label-text label-color-confirm">{{date_label[4]}}</div>
+      </div>
+    </div>
+    
+</div>
+<div class="recover-box" *ngIf="selected_chart=='recover'">
+  <div class="title-recover ">
+    Recovered
+  </div>
+    <canvas baseChart style="
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    " width="760" height="420" [datasets]="recoverData" [labels]="lineChartLabels" [options]="recoverChartOptions"
+        [legend]="lineChartLegend" [chartType]="lineChartType">
+    </canvas>
+    <div class="x-axis axes-color-recover"></div>
+    <div class="y-axis axes-color-recover"></div>
+    <div class="x-label-box">
+      <div class="x-label-1">
+        <div class="vertical-line axes-color-recover"></div>
+        <div class="x-label-text label-color-recover">{{date_label[0]}}</div>
+      </div>
+      <div class="x-label-2">
+        <div class="vertical-line axes-color-recover"></div>
+        <div class="x-label-text label-color-recover">{{date_label[1]}}</div>
+      </div>
+      <div class="x-label-3">
+        <div class="vertical-line axes-color-recover"></div>
+        <div class="x-label-text label-color-recover">{{date_label[2]}}</div>
+      </div>
+      <div class="x-label-4">
+        <div class="vertical-line axes-color-recover"></div>
+        <div class="x-label-text label-color-recover">{{date_label[3]}}</div>
+      </div>
+      <div class="x-label-5">
+        <div class="vertical-line axes-color-recover"></div>
+        <div class="x-label-text label-color-recover">{{date_label[4]}}</div>
+      </div>
+    </div>
+    
+</div>
+<div class="death-box"  *ngIf="selected_chart=='death'">
+  <div class="title-death ">
+    Death
+  </div>
+    <canvas baseChart style="
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    " width="760" height="420" [datasets]="deathsData" [labels]="lineChartLabels" [options]="deathChartOptions"
+        [legend]="lineChartLegend" [chartType]="lineChartType">
+    </canvas>
+    <div class="x-axis axes-color-death"></div>
+    <div class="y-axis axes-color-death"></div>
+    <div class="x-label-box">
+      <div class="x-label-1">
+        <div class="vertical-line axes-color-death"></div>
+        <div class="x-label-text label-color-death">{{date_label[0]}}</div>
+      </div>
+      <div class="x-label-2">
+        <div class="vertical-line axes-color-death"></div>
+        <div class="x-label-text label-color-death">{{date_label[1]}}</div>
+      </div>
+      <div class="x-label-3">
+        <div class="vertical-line axes-color-death"></div>
+        <div class="x-label-text label-color-death">{{date_label[2]}}</div>
+      </div>
+      <div class="x-label-4">
+        <div class="vertical-line axes-color-death"></div>
+        <div class="x-label-text label-color-death">{{date_label[3]}}</div>
+      </div>
+      <div class="x-label-5">
+        <div class="vertical-line axes-color-death"></div>
+        <div class="x-label-text label-color-death">{{date_label[4]}}</div>
+      </div>
+    </div>
+    
+</div>
+<div class="active-box"  *ngIf="selected_chart=='active'">
+  <div class="title-active ">
+    Active
+  </div>
+    <canvas baseChart style="
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    " width="760" height="420" [datasets]="activeData" [labels]="lineChartLabels" [options]="activeChartOptions"
+        [legend]="lineChartLegend" [chartType]="lineChartType">
+    </canvas>
+    <div class="x-axis axes-color-active"></div>
+    <div class="y-axis axes-color-active"></div>
+    <div class="x-label-box">
+      <div class="x-label-1">
+        <div class="vertical-line axes-color-active"></div>
+        <div class="x-label-text label-color-active">{{date_label[0]}}</div>
+      </div>
+      <div class="x-label-2">
+        <div class="vertical-line axes-color-active"></div>
+        <div class="x-label-text label-color-active">{{date_label[1]}}</div>
+      </div>
+      <div class="x-label-3">
+        <div class="vertical-line axes-color-active"></div>
+        <div class="x-label-text label-color-active">{{date_label[2]}}</div>
+      </div>
+      <div class="x-label-4">
+        <div class="vertical-line axes-color-active"></div>
+        <div class="x-label-text label-color-active">{{date_label[3]}}</div>
+      </div>
+      <div class="x-label-5">
+        <div class="vertical-line axes-color-active"></div>
+        <div class="x-label-text label-color-active">{{date_label[4]}}</div>
+      </div>
+    </div>
+    
+</div>
+</div>
+
+
+
+<div class="days-option-box row">
+  <div class="days-choose-box {{days_selected==90?'days-select':''}}" (click)="change_days(90)">
+    <div class="days-text">90 Days</div>
+  </div>
+  <div class="days-choose-box {{days_selected==60?'days-select':''}}" (click)="change_days(60)">
+    <div class="days-text">60 Days</div>
+  </div>
+  <div class="days-choose-box {{days_selected==30?'days-select':''}}" (click)="change_days(30)">
+    <div class="days-text">30 Days</div>
+  </div>
+  </div>

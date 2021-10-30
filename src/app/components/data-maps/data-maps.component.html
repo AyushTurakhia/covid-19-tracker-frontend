@@ -1,0 +1,23 @@
+
+
+
+<!-- <google-chart [data]="geoChart" *ngIf=mapReady style="margin-top: 20px;margin-bottom:20px"></google-chart> -->
+<div class="option-box row">
+    <div class="choose-box {{selected_chart=='confirm'?'choose-box-select':''}}" (click)="change_chart('confirm')">
+      <div class="dot confirm"></div>
+    </div>
+    <div class="choose-box {{selected_chart=='recover'?'choose-box-select':''}}" (click)="change_chart('recover')">
+      <div class="dot recover"></div>
+    </div>
+    <div class="choose-box {{selected_chart=='active'?'choose-box-select':''}}" (click)="change_chart('active')">
+      <div class="dot active"></div>
+    </div>
+    <div class="choose-box {{selected_chart=='death'?'choose-box-select':''}}" (click)="change_chart('death')">
+      <div class="dot death"></div>
+    </div>
+</div>
+<div style="position: relative;margin-top:20px;width:100%;">
+    <div id="container" style="position:absolute;left:50%;transform:translateX(-50%)"></div>
+</div>
+
+
