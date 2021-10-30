@@ -1,4 +1,5 @@
-<app-data-card></app-data-card>
+<div style="padding-bottom:20px;">
+  <app-data-card></app-data-card>
 <app-data-progress-bar></app-data-progress-bar>
 <div style="position: relative;">
   <div class="option-container row">
@@ -17,3 +18,4 @@
 <app-data-linechart *ngIf="selected=='graph' && !is_phone"></app-data-linechart>
 <app-data-maps *ngIf="selected=='map'"></app-data-maps>
 <app-line-chart *ngIf="selected=='graph' && is_phone"></app-line-chart>
+</div>
