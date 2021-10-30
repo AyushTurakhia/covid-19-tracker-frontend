@@ -33,6 +33,7 @@
             "styles": [
               "src/styles.scss"
             ],
+            "allowedCommonJsDependencies": ["chart.js"],
             "scripts": [
               "node_modules/datamaps/dist/datamaps.world.min.js"
             ]
@@ -42,13 +43,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "5kb",
+                  "maximumError": "10kb"
                 }
               ],
               "fileReplacements": [
