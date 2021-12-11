@@ -101,10 +101,12 @@ export class DataCardComponent implements OnInit {
       this.type_screen='l'
     }
     let date: Date = new Date();  
-    var end_date = this.getDateString(date)
+    // var end_date = this.getDateString(date)
+    var end_date = "2021-11-01"
     console.log(end_date)
-    date.setDate(date.getDate()-30)
-    var start_date = this.getDateString(date)
+    // date.setDate(date.getDate()-30)
+    // var start_date = this.getDateString(date)
+    var start_date = "2021-09-29"
     console.log(start_date)
     var data = {
       state_code:"IN",
@@ -113,7 +115,7 @@ export class DataCardComponent implements OnInit {
   }
     this.apiservice.post("statewise_timeseries_data/",data).subscribe(
       res=>{
-        // console.log(res["data"])
+        console.log(res)
         var label =[]
         var confirm_data=[]
         var recover_data=[]
@@ -134,6 +136,7 @@ export class DataCardComponent implements OnInit {
         this.curent_recover_count=recover_data[recover_data.length-1]
         this.curent_confirm_count=confirm_data[confirm_data.length-1]
         this.curent_death_count=death_data[death_data.length-1]
+        console.log("data=>",res["data"])
         this.total_confirm=this.convert_number(res["data"][res["data"].length-1]["total_confirm"])
         this.total_active=this.convert_number(res["data"][res["data"].length-1]["total_active"])
         this.total_death=this.convert_number(res["data"][res["data"].length-1]["total_death"])
