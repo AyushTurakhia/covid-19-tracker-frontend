@@ -100,13 +100,13 @@ export class DataCardComponent implements OnInit {
     }else{
       this.type_screen='l'
     }
-    let date: Date = new Date();  
-    // var end_date = this.getDateString(date)
-    var end_date = "2021-11-01"
+    let date: Date = new Date("2021-09-09");  
+    var end_date = this.getDateString(date)
+    //var end_date = "2021-11-01"
     console.log(end_date)
-    // date.setDate(date.getDate()-30)
-    // var start_date = this.getDateString(date)
-    var start_date = "2021-09-29"
+    date.setDate(date.getDate()-30)
+    var start_date = this.getDateString(date)
+    //var start_date = "2021-09-29"
     console.log(start_date)
     var data = {
       state_code:"IN",
@@ -137,10 +137,12 @@ export class DataCardComponent implements OnInit {
         this.curent_confirm_count=confirm_data[confirm_data.length-1]
         this.curent_death_count=death_data[death_data.length-1]
         console.log("data=>",res["data"])
-        this.total_confirm=this.convert_number(res["data"][res["data"].length-1]["total_confirm"])
-        this.total_active=this.convert_number(res["data"][res["data"].length-1]["total_active"])
-        this.total_death=this.convert_number(res["data"][res["data"].length-1]["total_death"])
-        this.total_recover=this.convert_number(res["data"][res["data"].length-1]["total_recovered"])
+        if(res["data"].length>0){
+          this.total_confirm=this.convert_number(res["data"][res["data"].length-1]["total_confirm"])
+          this.total_active=this.convert_number(res["data"][res["data"].length-1]["total_active"])
+          this.total_death=this.convert_number(res["data"][res["data"].length-1]["total_death"])
+          this.total_recover=this.convert_number(res["data"][res["data"].length-1]["total_recovered"])
+        }
       },
       err=>{
         console.log(err)

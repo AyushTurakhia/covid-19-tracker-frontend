@@ -269,7 +269,7 @@ export class DataLinechartComponent implements OnInit {
   }
 
   create_chart(diff_day:number){
-    let date: Date = new Date();  
+    let date: Date = new Date("2021-09-09");  
     var end_date = this.getDateString(date)
     console.log(end_date)
     date.setDate(date.getDate()-diff_day)
@@ -307,10 +307,12 @@ export class DataLinechartComponent implements OnInit {
         this.curent_recover_count=recover_data[recover_data.length-1]
         this.curent_confirm_count=confirm_data[confirm_data.length-1]
         this.curent_death_count=death_data[death_data.length-1]
-        this.total_confirm=this.convert_number(res["data"][res["data"].length-1]["total_confirm"])
-        this.total_active=this.convert_number(res["data"][res["data"].length-1]["total_active"])
-        this.total_death=this.convert_number(res["data"][res["data"].length-1]["total_death"])
-        this.total_recover=this.convert_number(res["data"][res["data"].length-1]["total_recovered"])
+        if(res["data"].length>0){
+          this.total_confirm=this.convert_number(res["data"][res["data"].length-1]["total_confirm"])
+          this.total_active=this.convert_number(res["data"][res["data"].length-1]["total_active"])
+          this.total_death=this.convert_number(res["data"][res["data"].length-1]["total_death"])
+          this.total_recover=this.convert_number(res["data"][res["data"].length-1]["total_recovered"])
+        }
         if(diff_day==30){
           let date: Date = new Date();
           date.setDate(date.getDate()-30)
